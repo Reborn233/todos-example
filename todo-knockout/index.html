@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todo-knockout</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/knockout/3.4.2/knockout-min.js"></script>
+  </head>
+
+  <body>
+    <main id="app" class="card">
+      <h2 class="center" data-bind="text:title">Notes - knockout</h2>
+      <form id="form" data-bind="submit:inputHandle">
+        <input
+          type="text"
+          autofocus
+          data-bind="textInput:val"
+          placeholder="写点什么..."
+        />
+        <p class="hint" data-bind="text:'一共 '+notes().length+' 件事情'"></p>
+      </form>
+      <div class="tab" data-bind="foreach:tabs">
+        <div
+          class="tab-item"
+          data-bind="text:label,css:{active:$parent.status() === value},event:{
+            click:$parent.tabHandle
+          }"
+        ></div>
+      </div>
+      <div class="tab-container">
+        <ol id="todos-list" data-bind="foreach:filterNotes">
+          <li>
+            <span
+              class="content"
+              data-bind="text:content,css:{del:finished},event:{
+                click:$parent.rowClickHandle
+              }"
+            ></span>
+            <span class="btn" data-bind="click:$parent.delHandle">删除</span>
+          </li>
+        </ol>
+      </div>
+    </main>
+  </body>
+</html>
+
+<script src="../assets/data.js"></script>
+<script src="./todo.js"></script>
