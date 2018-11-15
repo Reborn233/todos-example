@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todo-Backbone</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.bootcss.com/backbone.js/1.3.3/backbone-min.js"></script>
+    <script src="https://cdn.bootcss.com/backbone-localstorage.js/1.1.16/backbone.localStorage-min.js"></script>
+  </head>
+
+  <body>
+    <main id="app" class="card">
+      <h2 class="center">Notes - Backbone</h2>
+      <form id="form">
+        <input type="text" autofocus id="input" placeholder="写点什么..." />
+      </form>
+      <div class="tab">
+        <div class="tab-item active" name="all">全部</div>
+        <div class="tab-item" name="doing">进行中</div>
+        <div class="tab-item" name="finished">已完成</div>
+      </div>
+      <div class="tab-container"><ol id="todos-list"></ol></div>
+      <div class="footer"></div>
+    </main>
+  </body>
+</html>
+
+<script src="../assets/data.js"></script>
+<script src="./todo.js"></script>
+
+<script id="todos-tpl" type="text/template">
+  <%if(finished){%>
+    <span class="content del"><%= content%></span>
+  <%}else{%>
+    <span class="content"><%= content%></span>
+  <%};%>
+  <span class="btn">删除</span>
+</script>
+
+<script id="footer-tpl" type="text/template">
+  <p class="hint">一共 <%= len%> 件事情</p>
+</script>
