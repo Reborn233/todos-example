@@ -67,7 +67,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h2 className="center">Notes - React</h2>
+        <h2 className="center">Note - React</h2>
         <FormInput
           len={this.state.notes.length}
           handleInput={this.handleInput}

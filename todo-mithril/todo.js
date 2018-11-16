@@ -104,7 +104,7 @@ var app = {
   view: function(vnode) {
     app.state.status = vnode.attrs.status
     return m('main', { id: 'app', class: 'card' }, [
-      m('h2', { class: 'center' }, 'Notes - mithril'),
+      m('h2', { class: 'center' }, 'Note - mithril'),
       m(Form, { inputHandle: this.inputHandle }),
       m(Tab),
       m(List, { toggleHandle: this.toggleHandle, delHandle: this.remove })

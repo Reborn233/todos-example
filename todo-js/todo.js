@@ -58,7 +58,7 @@ function renderPage() {
   note.notes = JSON.parse(fetch('notes-js')) || note.notes
   const noData = `<p class="center">no data</p>`
   $app.innerHTML = `
-    <h2 class="center">Notes - Js</h2>
+    <h2 class="center">Note - Js</h2>
     <form id="form">
     ${renderForm()}
     </form>

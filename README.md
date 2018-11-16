@@ -1,4 +1,6 @@
-# 各种现代前端框架的 NoteTodo 例子
+# 各种框架的 NoteTodo 例子
+
+学习了各种不同的前端框架,用不同的框架构建 todo 应用。
 
 1. [x] [JavaScript](https://reborn233.github.io/todos-example/todo-js/)
 2. [x] [React](https://reborn233.github.io/todos-example/todo-react/)
