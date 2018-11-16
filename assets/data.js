@@ -53,3 +53,17 @@ function fetch(key) {
   const notes = localStorage.getItem(key)
   return notes ? notes : null
 }
+
+window.onload = function() {
+  var $footer = `
+    <footer class='info'>
+      <p>
+        Create by
+        <a href="https://github.com/Reborn233/todos-example">Reborn233</a>
+      </p>
+    </footer>
+    `
+  var footer = document.createElement('footer')
+  footer.innerHTML = $footer
+  document.body.appendChild(footer)
+}
