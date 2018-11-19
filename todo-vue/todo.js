@@ -31,7 +31,6 @@ const app = new Vue({
     },
     rowClickHandle(item) {
       item.finished = !item.finished
-      console.log(item)
       save('notes-vue', this.notes)
     },
     delClickHandle(id) {

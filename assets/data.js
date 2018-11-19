@@ -56,12 +56,10 @@ function fetch(key) {
 
 window.onload = function() {
   var $footer = `
-    <footer class='info'>
       <p>
         Create by
         <a href="https://github.com/Reborn233/todos-example">Reborn233</a>
       </p>
-    </footer>
     `
   var footer = document.createElement('footer')
   footer.innerHTML = $footer
