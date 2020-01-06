@@ -17,8 +17,7 @@ var TabItem = {
     var active = vnode.attrs.active
     var item = vnode.attrs.item
     return m(
-      'div',
-      {
+      'div', {
         class: 'tab-item ' + active,
         onclick: function() {
           m.route.set('/' + item.value)
@@ -33,8 +32,7 @@ var Form = {
   view: function(vnode) {
     var inputHandle = vnode.attrs.inputHandle
     return m(
-      'form',
-      {
+      'form', {
         id: 'form',
         onsubmit: function(e) {
           inputHandle.apply(app, [e])
@@ -76,8 +74,7 @@ var ListItem = {
     var del = item.finished ? 'del' : ''
     return m('li', { name: item.id }, [
       m(
-        'span',
-        {
+        'span', {
           class: `content ${del}`,
           onclick: function() {
             toggle.apply(app, [item])
@@ -86,8 +83,7 @@ var ListItem = {
         item.content
       ),
       m(
-        'span',
-        {
+        'span', {
           class: 'btn',
           onclick: function() {
             remove.apply(app, [item.id])

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todo-CanJs</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+    <script src="../assets/data.js"></script>
+  </head>
+  <script>
+    window.onload = function() {
+      document.getElementById('loading').style.display = 'none'
+    }
+  </script>
+
+  <body>
+    <main id="app" class="card">
+      <h2 class="center">Note - CanJs</h2>
+      <todo-mvc></todo-mvc>
+
+      <p id="loading" style="text-align:center;">Loading...</p>
+    </main>
+
+    <script type="module" src="./todo.js"></script>
+  </body>
+</html>
